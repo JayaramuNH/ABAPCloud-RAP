@@ -5,7 +5,7 @@ define behavior for ZJNH_TRAVEL_ROOT alias Travel
 persistent table /dmo/travel_m
 lock master
 authorization master ( instance )
-//etag master <field_name>
+//etag master <field_name >
 {
   create;
   update;

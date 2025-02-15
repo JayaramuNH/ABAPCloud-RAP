@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
 define view entity ZATS_JNH_BOOKING as select from /dmo/booking_m
 composition[0..*] of ZATS_JNH_BOOKSUPPL as _BookingSupplement
 association to parent ZATS_JNH_TRAVEL as _Travel on
