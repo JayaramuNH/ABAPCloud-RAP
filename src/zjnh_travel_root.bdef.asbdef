@@ -1,0 +1,27 @@
+managed implementation in class zbp_jnh_travel_root unique;
+strict ( 2 );
+
+define behavior for ZJNH_TRAVEL_ROOT alias Travel
+persistent table /dmo/travel_m
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) TravelId;
+  association _Booking { create; }
+}
+
+define behavior for ZJNH_BOOKING alias Booking
+persistent table /dmo/booking_m
+lock dependent by _Travel
+authorization dependent by _Travel
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId;
+  association _Travel;
+}

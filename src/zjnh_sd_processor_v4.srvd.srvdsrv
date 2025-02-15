@@ -1,0 +1,11 @@
+@EndUserText.label: 'service for Processor App'
+define service ZJNH_SD_PROCESSOR_V4 {
+  expose ZJNH_TRAVEL_ROOT_PRO_PROCESSOR as Travel;
+  expose ZJNH_BOOKING_PRO_PROCESSOR     as Booking;
+  expose /DMO/I_Agency                  as Agency;
+  expose /DMO/I_Customer                as Customer;
+  expose /DMO/I_Carrier                 as Carrier;
+  expose /DMO/I_Connection              as Connection;
+  expose /DMO/I_Overall_Status_VH       as OverallStatus;
+  expose /DMO/I_Booking_Status_VH       as BookingStatus;
+}
